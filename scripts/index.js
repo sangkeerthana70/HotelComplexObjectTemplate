@@ -19,3 +19,30 @@ var hotel = {
     name: "CareerDevs Innt"
 }
 
+//console.log(document.getElementById("label").nodeName);
+
+
+for (var i = 0; i < hotel.rooms.length; i++ ) {
+    console.log("start");
+    var radioBtn = document.createElement("INPUT");
+    var radioLbl = document.createElement("LABEL");
+    radioBtn.setAttribute("type", "radio");
+    radioBtn.setAttribute("name", "rooms");
+    radioBtn.setAttribute("value", i);
+    radioBtn.setAttribute("id", "room" + i);
+    radioLbl.innerHTML = hotel.rooms[i].name;
+    console.log("stop");
+    
+    
+    document.getElementById("radialSection").appendChild(radioBtn);
+    document.getElementById("radialSection").appendChild(radioLbl);
+}
+
+
+
+
+//console.log(hotel.rooms[0].name);
+
+//display rooms as radio options
+
+// on form submission confirm radio 
